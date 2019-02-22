@@ -3,6 +3,7 @@ import {HashRouter as Router,Route,Switch,NavLink,Redirect} from "react-router-d
 import Home from "./children/home";
 import Classify from "./children/classify";
 import Mine from "./children/mine";
+import Search from "./children/search";
 import Shop from "./children/shop";
 export default class Entry extends Component{
     render(){
@@ -15,6 +16,7 @@ export default class Entry extends Component{
                             <Route path="/entry/classify" component={Classify}/>
                             <Route path="/entry/shop" component={Shop}/>
                             <Route path="/entry/mine" component={Mine}/>
+                            <Route path="/entry/search" component={Search}/>
                             <Redirect path="/" to="/entry/home"/>
                         </Switch>
                         <footer>

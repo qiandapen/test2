@@ -1,15 +1,16 @@
-import React,{Component} from "react";
+import React,{Component,Fragment} from "react";
+import "./banner.css";
 export default class Banner extends Component{
     render(){
         let {banners} = this.props;
         return(
-            <div className="banner">
+            <Fragment>
                 {
                     banners.map((item,index)=>{
-                        return <div key={index}><img src={item} alt=""/></div>
+                        return <div className="swiper-slide" key={index}><img src={item.url} alt="" style={{width:"100%"}} /></div>
                     })
                 }
-            </div>
+            </Fragment>
         )
     }
 }
